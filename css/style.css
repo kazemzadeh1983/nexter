@@ -113,17 +113,21 @@ body {
   display: grid;
   align-items: center;
   grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(6, 1fr); }
+  grid-template-columns: repeat(6, 1fr);
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg); }
 
 .story__img--1 {
   width: 100%;
   grid-column: 2 / 6;
-  grid-row: 2 / 6; }
+  grid-row: 2 / 6;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
 
 .story__img--2 {
   width: 115%;
   grid-column: 4 / 7;
-  grid-row: 4 / 6; }
+  grid-row: 4 / 6;
+  z-index: 2;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); }
 
 .story__content {
   background-color: #f9f7f6;
@@ -142,8 +146,35 @@ body {
   font-style: italic; }
 
 .homes {
-  background-color: #101d2c;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .home__img {
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2; }
+  .home__like {
+    fill: #c69963;
+    height: 2.5rem;
+    width: 2.5rem;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: end; }
+  .home__name {
+    grid-column: 1 / -1; }
+  .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
+    fill: #c69963;
+    height: 2rem;
+    width: 2rem; }
+  .home__btn {
+    grid-column: 1 / -1; }
 
 .gallery {
   background-color: #6D5D4B;
